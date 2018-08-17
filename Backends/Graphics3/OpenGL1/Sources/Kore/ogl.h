@@ -1,8 +1,8 @@
 #pragma once
 
 #ifdef KORE_WINDOWS
-#include <GL/gl.h>
 #include <GL/glew.h>
+#include <GL/gl.h>
 #endif
 
 #ifdef KORE_MACOS

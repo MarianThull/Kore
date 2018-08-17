@@ -1,13 +1,5 @@
 #include "pch.h"
 
-#ifdef KORE_G4ONG5
-#include <Kore/Graphics5/Graphics.h>
-#elif KORE_G4
-#include <Kore/Graphics4/Graphics.h>
-#else
-#include <Kore/Graphics3/Graphics.h>
-#endif
-
 #include <Kore/Display.h>
 #include <Kore/Input/Gamepad.h>
 #include <Kore/Input/Keyboard.h>
@@ -27,10 +19,6 @@
 #include <stdio.h>
 #include <wbemidl.h>
 
-#ifdef KORE_OCULUS
-#include "Kore/Vr/VrInterface.h"
-#endif
-
 #define WIN32_LEAN_AND_MEAN
 #define NOMINMAX
 #include <Windows.h>
@@ -38,6 +26,18 @@
 #include <XInput.h>
 #include <exception>
 #include <shlobj.h>
+
+#ifdef KORE_G4ONG5
+#include <Kore/Graphics5/Graphics.h>
+#elif KORE_G4
+#include <Kore/Graphics4/Graphics.h>
+#else
+#include <Kore/Graphics3/Graphics.h>
+#endif
+
+#ifdef KORE_OCULUS
+#include "Kore/Vr/VrInterface.h"
+#endif
 
 #ifdef KORE_G4ONG5
 #define Graphics Graphics5
